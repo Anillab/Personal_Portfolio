@@ -14,6 +14,9 @@ class Post(models.Model):
 class Category(models.Model):
     name=models.CharField(max_length=20)
 
+    def __str__(self):
+        return self.name
+
 class Comment(models.Model):
     author=models.CharField(max_length=60)
     body=models.TextField()
